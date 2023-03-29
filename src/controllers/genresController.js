@@ -10,6 +10,11 @@ module.exports = {
         })
     },
     detail: (req, res) => {
+        const genreId = req.params.id;
 
+        db.Genre.findByPk(genreId)
+            .then((genre) => {
+                res.render("genresDetail", {genre})
+            })
     }
 }

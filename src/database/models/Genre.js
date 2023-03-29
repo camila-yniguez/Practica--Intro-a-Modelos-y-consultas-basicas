@@ -28,7 +28,8 @@ module.exports = (sequalize, dataTypes) => {
 
     const config = {
         tableName: "genres",
-        timestamps: false,
+        createdAt: "created_at",
+        updatedAt: "updated_at",
     }
 
     const Genre = sequalize.define(alias, cols, config)
